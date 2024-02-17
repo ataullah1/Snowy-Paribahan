@@ -320,9 +320,11 @@
           <div
             class="gap-5 flex flex-col md:flex-row justify-between items-center"
           >
-            <div class="w-3/4">
-              <div class="flex justify-between">
-                <div class="flex items-center gap-3">
+            <div class="w-full md:w-3/4">
+              <div
+                class="flex flex-col sm:flex-row m-auto gap-3 sm:gap-1 justify-between"
+              >
+                <div class="flex items-center m-auto sm:m-0 gap-3">
                   <img
                     class="w-[68.571px] h-12"
                     src="./images/bus-logo.png"
@@ -357,7 +359,9 @@
                   </p>
                   <p class="text-lg font-semibold text-black">9:00 PM</p>
                 </div>
-                <div class="flex justify-between">
+                <div
+                  class="flex flex-col lg:flex-row gap-3 lg:gap-0 justify-between"
+                >
                   <button
                     class="bg-[#0307120D] rounded-xl text-base inter font-medium text-[#030712CC] py-2 px-4"
                   >
@@ -377,7 +381,7 @@
               </div>
             </div>
             <div
-              class="w-1/4 text-center border-l-2 border-dashed border-primary"
+              class="w-full md:w-1/4 bg-gray-600 md:bg-white text-white md:text-black text-center md:border-l-2 border-dashed border-primary h-full py-16 rounded-2xl md:rounded-none"
             >
               <img
                 class="h-12 w-12 mb-5 m-auto"
@@ -385,7 +389,11 @@
                 alt=""
               />
               <h1 class="text-3xl font-bold to-black">550 Taka</h1>
-              <p class="text-2xl font-semibold text-[#03071299]">Per Seat</p>
+              <p
+                class="text-2xl font-semibold text-[#03071299] text-white md:text-black"
+              >
+                Per Seat
+              </p>
             </div>
           </div>
         </section>
