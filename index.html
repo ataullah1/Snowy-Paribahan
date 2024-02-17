@@ -29,8 +29,8 @@
   </head>
   <body class="box-border raleway">
     <section class="w-full sm:w-11/12 px-5 sm:px-0 m-auto">
+      <!-- Header  -->
       <div class="min-h-screen py-5">
-        <!-- Header  -->
         <header class="mb-5">
           <div
             class="navbar flex items-center flex-col sm:flex-row sm:justify-between bg-base-100 bg-white"
@@ -128,16 +128,20 @@
           </div>
         </header>
         <!-- banner section  -->
-        <div class="w-full h-[550px] banner flex justify-center relative">
-          <div class="min-w-[740px] text-center space-y-6 mt-12">
+        <div
+          class="w-full h-[380px] md:h-[550px] banner bg-center flex justify-center items-center lg:items-start relative"
+        >
+          <div class="text-center space-y-6 mt-12">
             <h1
-              class="text-white text-6xl font-extrabold text-center leading-[86px]"
+              class="px-4 text-white text-4xl md:text-6xl font-extrabold text-center md:leading-[86px]"
             >
               End-to-End Travel with <br /><span class="text-primary">
                 Snowy Paribahan</span
               >
             </h1>
-            <p class="text-lg font-normal text-white max-w-[691px]">
+            <p
+              class="text-base md:text-lg font-normal text-white px-4 md:max-w-[691px] m-auto"
+            >
               Why do you go to the counter to buy tickets in this digital age?
               Snowy Transport brings an online ticketing facility. So book your
               tickets now.
@@ -149,56 +153,139 @@
               Buy Tickets
             </button>
           </div>
-          <div
-            class="flex gap-5 justify-between max-w-[1000px] absolute -bottom-14"
-          >
-            <div
-              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
-            >
-              <img class="h-16 w-16" src="./images/people.png" alt="" />
-              <div>
-                <h1 class="text-4xl font-bold text-[#030712] inter">500K+</h1>
-                <p class="inter text-lg font-normal text-[#03071299]">
-                  Registered users
-                </p>
+
+          <div class="max-w-[1000px] absolute -bottom-14 hidden lg:block">
+            <div class="flex flex-row gap-5 justify-between">
+              <div
+                class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+              >
+                <img class="h-16 w-16" src="./images/people.png" alt="" />
+                <div>
+                  <h1 class="text-4xl font-bold text-[#030712] inter">500K+</h1>
+                  <p class="inter text-lg font-normal text-[#03071299]">
+                    Registered users
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
-            >
-              <img class="h-16 w-16" src="./images/ticket-cupon.png" alt="" />
-              <div>
-                <h1 class="text-4xl font-bold text-[#030712] inter">
-                  1.7 lacks
-                </h1>
-                <p class="inter text-lg font-normal text-[#03071299]">
-                  Tickets sold
-                </p>
+              <div
+                class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+              >
+                <img class="h-16 w-16" src="./images/ticket-cupon.png" alt="" />
+                <div>
+                  <h1 class="text-4xl font-bold text-[#030712] inter">
+                    1.7 lacks
+                  </h1>
+                  <p class="inter text-lg font-normal text-[#03071299]">
+                    Tickets sold
+                  </p>
+                </div>
               </div>
-            </div>
-            <div
-              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
-            >
-              <img
-                class="h-16 w-16"
-                src="./images/tabler-icon-bus-stop.svg"
-                alt=""
-              />
-              <div>
-                <h1 class="text-4xl font-bold text-[#030712] inter">80K+</h1>
-                <p class="inter text-lg font-normal text-[#03071299]">
-                  Rental partners
-                </p>
+              <div
+                class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+              >
+                <img
+                  class="h-16 w-16"
+                  src="./images/tabler-icon-bus-stop.svg"
+                  alt=""
+                />
+                <div>
+                  <h1 class="text-4xl font-bold text-[#030712] inter">80K+</h1>
+                  <p class="inter text-lg font-normal text-[#03071299]">
+                    Rental partners
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <!-- main section  -->
-    </section>
 
+        <div class="flex flex-col gap-5 justify-between lg:hidden mt-6">
+          <div
+            class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+          >
+            <img class="h-16 w-16" src="./images/people.png" alt="" />
+            <div>
+              <h1 class="text-4xl font-bold text-[#030712] inter">500K+</h1>
+              <p class="inter text-lg font-normal text-[#03071299]">
+                Registered users
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+          >
+            <img class="h-16 w-16" src="./images/ticket-cupon.png" alt="" />
+            <div>
+              <h1 class="text-4xl font-bold text-[#030712] inter">1.7 lacks</h1>
+              <p class="inter text-lg font-normal text-[#03071299]">
+                Tickets sold
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+          >
+            <img
+              class="h-16 w-16"
+              src="./images/tabler-icon-bus-stop.svg"
+              alt=""
+            />
+            <div>
+              <h1 class="text-4xl font-bold text-[#030712] inter">80K+</h1>
+              <p class="inter text-lg font-normal text-[#03071299]">
+                Rental partners
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main section  -->
+      <main>
+        <!-- Section one  -->
+        <section class="text-center">
+          <h1 class="text-4xl font-bold text-center text-black pb-10 pt-16">
+            Best offers for you
+          </h1>
+          <div class="flex flex-col lg:flex-row justify-between gap-5">
+            <div
+              class="secOne bg-no-repeat bg-contain rounded-3xl h-[220px] w-full"
+            >
+              <div>
+                <h1>15% OFF</h1>
+                <p>on your next purchase</p>
+                <p>use by January 2024</p>
+              </div>
+              <div>
+                <h1>NEW15</h1>
+                <p>Coupon Code</p>
+              </div>
+            </div>
+            <div
+              class="secTwo bg-no-repeat bg-contain rounded-3xl h-[220px] w-full"
+            >
+              <div>
+                <h1>20% OFF</h1>
+                <p>on your next purchase</p>
+                <p>use by January 2024</p>
+              </div>
+              <div>
+                <h1>Couple 20</h1>
+                <p>Coupon Code</p>
+              </div>
+            </div>
+          </div>
+          <button id=""
+            class="btn bg-[#fff0] py-3 px-7 border-2 border-primary text-primary hover:bg-primary hover:text-black hover:border-primary font-bold"
+          >
+            See All Offers
+          </button>
+        </section>
+      </main>
+    </section>
+    <img src="" alt="" />
     <!-- Footer section -->
-    <footer></footer>
+    <footer class="py-7"></footer>
     <!-- Script file link -->
     <script src="./js/script.js"></script>
   </body>
