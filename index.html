@@ -28,7 +28,7 @@
     </script>
   </head>
   <body class="box-border raleway">
-    <section class="w-full sm:w-11/12 px-5 sm:px-0 m-auto">
+    <section class="w-full sm:w-11/12 max-w-[1500px] px-5 sm:px-0 m-auto">
       <!-- Header  -->
       <div class="min-h-screen py-5">
         <header class="mb-5">
@@ -247,9 +247,11 @@
           <h1 class="text-4xl font-bold text-center text-black pb-10 pt-16">
             Best offers for you
           </h1>
-          <div class="flex flex-col lg:flex-row justify-between gap-5">
-            <div
-              class="secOne bg-no-repeat bg-contain rounded-3xl h-[220px] w-full"
+          <div
+            class="flex flex-col xl:flex-row justify-between items-center gap-5"
+          >
+            <!-- <div
+              class="secOne bg-no-repeat bg-cover rounded-3xl h-[220px] w-full bg-red-200"
             >
               <div>
                 <h1>15% OFF</h1>
@@ -262,7 +264,7 @@
               </div>
             </div>
             <div
-              class="secTwo bg-no-repeat bg-contain rounded-3xl h-[220px] w-full"
+              class="secTwo bg-no-repeat bg-cover rounded-3xl h-[220px] w-full bg-red-400"
             >
               <div>
                 <h1>20% OFF</h1>
@@ -273,10 +275,55 @@
                 <h1>Couple 20</h1>
                 <p>Coupon Code</p>
               </div>
+            </div> -->
+            <div
+              class="bg-[#FFBF0F] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex items-center justify-between relative"
+            >
+              <img
+                class="absolute left-[60%]"
+                src="./images/cupon-devider.png"
+                alt=""
+              />
+              <div class="inter text-left space-y-2">
+                <h1 class="text-[#030712CC] text-4xl font-black">20% OFF</h1>
+                <p class="text-xl text-[#030712CC] font-semibold">
+                  on your next purchase
+                </p>
+                <p class="text-lg font-medium text-[#03071280]">
+                  use by January 2024
+                </p>
+              </div>
+              <div class="space-y-2">
+                <h1 class="text-3xl font-bold">NEW15</h1>
+                <p class="text-xl text-[#03071266]">Coupon Code</p>
+              </div>
+            </div>
+            <div
+              class="bg-[#F78C9C] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex items-center justify-between relative"
+            >
+              <img
+                class="absolute left-[60%]"
+                src="./images/cupon-devider.png"
+                alt=""
+              />
+              <div class="inter text-left space-y-2">
+                <h1 class="text-[#030712CC] text-4xl font-black">20% OFF</h1>
+                <p class="text-xl text-[#030712CC] font-semibold">
+                  on your next purchase
+                </p>
+                <p class="text-lg font-medium text-[#03071280]">
+                  use by January 2024
+                </p>
+              </div>
+              <div class="space-y-2">
+                <h1 class="text-3xl font-bold">Couple 20</h1>
+                <p class="text-xl text-[#03071266]">Coupon Code</p>
+              </div>
             </div>
           </div>
-          <button id=""
-            class="btn bg-[#fff0] py-3 px-7 border-2 border-primary text-primary hover:bg-primary hover:text-black hover:border-primary font-bold"
+          <button
+            id=""
+            class="btn bg-[#fff0] mt-12 py-3 px-7 border-2 border-primary text-primary hover:bg-primary hover:text-black hover:border-primary font-bold"
           >
             See All Offers
           </button>
