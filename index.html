@@ -131,7 +131,7 @@
         <div
           class="w-full h-[380px] md:h-[550px] banner bg-center flex justify-center items-center lg:items-start relative"
         >
-          <div class="text-center space-y-6 mt-12">
+          <div class="text-center space-y-6 mt-12 scale-90 sm:scale-100">
             <h1
               class="px-4 text-white text-4xl md:text-6xl font-extrabold text-center md:leading-[86px]"
             >
@@ -253,14 +253,14 @@
             class="flex flex-col xl:flex-row justify-between items-center gap-5"
           >
             <div
-              class="bg-[#FFBF0F] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex items-center justify-between relative"
+              class="bg-[#FFBF0F] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex gap-5 flex-col sm:flex-row items-center justify-between relative"
             >
               <img
-                class="absolute left-[60%]"
+                class="absolute left-[60%] hidden sm:block"
                 src="./images/cupon-devider.png"
                 alt=""
               />
-              <div class="inter text-left space-y-2">
+              <div class="inter sm:text-left space-y-2">
                 <h1 class="text-[#030712CC] text-4xl font-black">20% OFF</h1>
                 <p class="text-xl text-[#030712CC] font-semibold">
                   on your next purchase
@@ -275,14 +275,14 @@
               </div>
             </div>
             <div
-              class="bg-[#F78C9C] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex items-center justify-between relative"
+              class="bg-[#F78C9C] w-full max-w-[620px] xl:w-1/2 rounded-3xl p-12 flex gap-5 flex-col sm:flex-row items-center justify-between relative"
             >
               <img
-                class="absolute left-[60%]"
+                class="absolute left-[60%] hidden sm:block"
                 src="./images/cupon-devider.png"
                 alt=""
               />
-              <div class="inter text-left space-y-2">
+              <div class="inter sm:text-left space-y-2 text-center">
                 <h1 class="text-[#030712CC] text-4xl font-black">20% OFF</h1>
                 <p class="text-xl text-[#030712CC] font-semibold">
                   on your next purchase
@@ -310,12 +310,84 @@
           <h1 id="ticketSec" class="text-4xl font-bold to-black text-center">
             <!-- <a href="#btnBuyBanner"> </a> -->Snowy Paribahan
           </h1>
-          <p class="text-lg font-normal text-[#03071299] text-center">
+          <p
+            class="text-lg font-normal text-[#03071299] text-center w-full md:max-w-[736px] m-auto pb-9"
+          >
             Why do you go to the counter to buy tickets in this digital age?
             Snowy Transport brings an online ticketing facility. So book your
             tickets now.
           </p>
-          <div></div>
+          <div
+            class="gap-5 flex flex-col md:flex-row justify-between items-center"
+          >
+            <div class="w-3/4">
+              <div class="flex justify-between">
+                <div class="flex items-center gap-3">
+                  <img
+                    class="w-[68.571px] h-12"
+                    src="./images/bus-logo.png"
+                    alt=""
+                  />
+                  <div>
+                    <h1 class="text-3xl font-bold text-black">Snowy Express</h1>
+                    <p class="text-[#03071299] text-lg font-normal inter">
+                      Coach-1000H ! AC_Business
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-center">
+                  <button
+                    class="bg-[#1DD10026] flex flex-row gap-1 items-center rounded-xl text-lg text-primary px-4 py-2 font-bold"
+                  >
+                    <img class="w-7 h7" src="./images/seat.svg" alt="" />
+                    <span id="seats">40</span> Seats left
+                  </button>
+                </div>
+              </div>
+              <div class="bg-[#F7F8F8] rounded-3xl p-8 mt-6">
+                <div class="flex justify-between">
+                  <p class="text-lg font-semibold text-[#03071299]">Route</p>
+                  <p class="text-lg font-semibold text-black">Dhaka - Sylhet</p>
+                </div>
+                <div
+                  class="flex justify-between border-b border-t border-dashed border-[#03071233] py-5 my-5"
+                >
+                  <p class="text-lg font-semibold text-[#03071299]">
+                    Departure Time
+                  </p>
+                  <p class="text-lg font-semibold text-black">9:00 PM</p>
+                </div>
+                <div class="flex justify-between">
+                  <button
+                    class="bg-[#0307120D] rounded-xl text-base inter font-medium text-[#030712CC] py-2 px-4"
+                  >
+                    Boarding Point - Laxmipur
+                  </button>
+                  <button
+                    class="bg-[#0307120D] rounded-xl text-base inter font-medium text-[#030712CC] py-2 px-4"
+                  >
+                    Dropping Point - Bogura
+                  </button>
+                  <button
+                    class="bg-[#0307120D] rounded-xl text-base inter font-medium text-[#030712CC] py-2 px-4"
+                  >
+                    Est. Time - 11 Hour
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="w-1/4 text-center border-l-2 border-dashed border-primary"
+            >
+              <img
+                class="h-12 w-12 mb-5 m-auto"
+                src="./images/taka.svg"
+                alt=""
+              />
+              <h1 class="text-3xl font-bold to-black">550 Taka</h1>
+              <p class="text-2xl font-semibold text-[#03071299]">Per Seat</p>
+            </div>
+          </div>
         </section>
       </main>
     </section>
