@@ -1,28 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snowy Paribahan</title>
+    <link rel="shortcut icon" href="./images/bus.svg" type="image/x-icon" />
     <link rel="stylesheet" href="./style/style.css" />
     <!-- Tailwind CDN link  -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI CDN link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <!-- Tailwind customize color  -->
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              clifford: '#da373d',
+              primary: '#1DD100',
             },
           },
         },
       };
     </script>
   </head>
-  <body>
-    <h1>Hello</h1>
+  <body class="box-border raleway">
+    <section class="w-full sm:w-11/12 px-5 sm:px-0 m-auto">
+      <div class="min-h-screen py-5">
+        <!-- Header  -->
+        <header class="mb-5">
+          <div
+            class="navbar flex items-center flex-col sm:flex-row sm:justify-between bg-base-100 bg-white"
+          >
+            <div
+              class="navbar-start flex items-center flex-row-reverse justify-between w-full sm:w-auto sm:flex-row"
+            >
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-7 w-7 rotate-180 sm:rotate-0 text-primary"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 6h16M4 12h8m-8 6h16"
+                    />
+                  </svg>
+                </div>
+                <ul
+                  tabindex="0"
+                  class="menu menu-sm dropdown-content mt-3 ml-[-140px] sm:ml-0 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-normal text-primarybg bg-white text-[#424247] border-primary border-2"
+                >
+                  <li class="bg-none hover:text-primary">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="hover:text-primary">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="hover:text-primary">
+                    <a href="#">Destination</a>
+                  </li>
+                  <li class="hover:text-primary">
+                    <a href="#">Search</a>
+                  </li>
+                  <div
+                    class="block sm:hidden mt-3 w-full duration bg-[#1DD1001A] border border-primary py-2 text-center rounded-lg text-xl font-bold text-primary hover:text-primary hover:bg-white"
+                  >
+                    <button
+                      class="text-center m-auto flex flex-row items-center justify-center gap-4"
+                    >
+                      Bus
+                      <img
+                        class="sm:w-4 md:h-5 md:w-5"
+                        src="./images/bus.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                </ul>
+              </div>
+              <a
+                href="#"
+                class="btn-ghost text-primarybg poppins text-3xl sm:text-4xl font-bold px-0 hover:bg-white"
+                >Snowy Ticket</a
+              >
+            </div>
+            <div class="navbar-center">
+              <div class="navbar-center hidden lg:flex">
+                <ul
+                  class="menu menu-horizontal px-1 text-base font-normal text-[#424247]"
+                >
+                  <li class="hover:text-primary duration-200 hover:scale-110">
+                    <a href="#">Home</a>
+                  </li>
+                  <li class="hover:text-primary duration-200 hover:scale-110">
+                    <a href="#">About</a>
+                  </li>
+                  <li class="hover:text-primary duration-200 hover:scale-110">
+                    <a href="#">Destination</a>
+                  </li>
+                  <li class="hover:text-primary duration-200 hover:scale-110">
+                    <a href="#">Search</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="hidden sm:block transic">
+              <button
+                class="duration bg-[#1DD1001A] border border-primary text-xl font-bold sm:text-lg px-6 py-2 rounded-lg sm:px-6 text-primary hover:bg-white hover:text-primary flex flex-row items-center justify-center gap-4"
+              >
+                Bus
+                <img
+                  class="sm:w-4 md:h-5 md:w-5"
+                  src="./images/bus.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+          </div>
+        </header>
+        <!-- banner section  -->
+        <div class="w-full h-[550px] banner flex justify-center relative">
+          <div class="min-w-[740px] text-center space-y-6 mt-12">
+            <h1
+              class="text-white text-6xl font-extrabold text-center leading-[86px]"
+            >
+              End-to-End Travel with <br /><span class="text-primary">
+                Snowy Paribahan</span
+              >
+            </h1>
+            <p class="text-lg font-normal text-white max-w-[691px]">
+              Why do you go to the counter to buy tickets in this digital age?
+              Snowy Transport brings an online ticketing facility. So book your
+              tickets now.
+            </p>
+            <button
+              id="btnBuyBanner"
+              class="btn bg-primary font-bold px-6 border-2 border-primary hover:border-primary hover:text-white hover:bg-[#fff0] raleway"
+            >
+              Buy Tickets
+            </button>
+          </div>
+          <div
+            class="flex gap-5 justify-between max-w-[1000px] absolute -bottom-14"
+          >
+            <div
+              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+            >
+              <img class="h-16 w-16" src="./images/people.png" alt="" />
+              <div>
+                <h1 class="text-4xl font-bold text-[#030712] inter">500K+</h1>
+                <p class="inter text-lg font-normal text-[#03071299]">
+                  Registered users
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+            >
+              <img class="h-16 w-16" src="./images/ticket-cupon.png" alt="" />
+              <div>
+                <h1 class="text-4xl font-bold text-[#030712] inter">
+                  1.7 lacks
+                </h1>
+                <p class="inter text-lg font-normal text-[#03071299]">
+                  Tickets sold
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-4 py-4 px-7 rounded-3xl border-b-[3px] border-solid border-primary bg-white"
+            >
+              <img
+                class="h-16 w-16"
+                src="./images/tabler-icon-bus-stop.svg"
+                alt=""
+              />
+              <div>
+                <h1 class="text-4xl font-bold text-[#030712] inter">80K+</h1>
+                <p class="inter text-lg font-normal text-[#03071299]">
+                  Rental partners
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- main section  -->
+    </section>
 
+    <!-- Footer section -->
+    <footer></footer>
     <!-- Script file link -->
     <script src="./js/script.js"></script>
   </body>
