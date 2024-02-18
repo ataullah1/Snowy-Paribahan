@@ -34,7 +34,7 @@ for (const seat of seats) {
         const availableS = parseInt(seatNum) - 1;
         availableSeat.innerText = availableS;
       } else {
-        console.log('hello');
+        alert('Sorry, you have already booked this seat.');
       }
     } else {
       removeEventListener(seat);
@@ -51,7 +51,41 @@ for (const seat of seats) {
       // console.log(set.innerText);
       arr.push(set.innerText);
     }
-    // console.log(a[0].length);
     // console.log(arr);
+    coupon();
   });
+}
+
+function coupon() {
+  const seatList = document.getElementsByClassName('seatList');
+  let arr = [];
+  for (const set of seatList) {
+    // console.log(set.innerText);
+    const setVlu = set.innerText;
+    arr.push(setVlu);
+  }
+  // console.log(arr);
+  if (arr.length === 4) {
+    const inp = document.getElementById('couponInp');
+    inp.disabled = false;
+    inp.classList.add('bg-white');
+    inp.parentNode.classList.add('bg-white');
+
+    const btn = document.getElementById('btnCoupon');
+    btn.parentNode.innerHTML = `<button
+    id="btnCouponAct"
+    class="bg-primary text-white h-full px-4 rounded-lg text-base font-semibold border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary cursor-pointer">
+    Apply
+  </button>`;
+
+    const btnAct = document.getElementById('btnCouponAct');
+    btnAct.addEventListener('click', function () {
+      btnAct.innerText = 'Applied';
+      setTimeout(() => {
+        // const box = document.getElementById('box');
+        btnAct.parentNode.parentNode.classList.add('hidden');
+      }, 500);
+      btnAct.parentNode.parentNode.innerHTML = 'fafdasf';
+    });
+  }
 }
