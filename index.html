@@ -735,7 +735,11 @@
               >
                 <p class="text-left col-span-2">
                   Seat
-                  <span class="bg-primary px-3 rounded-lg text-white">2</span>
+                  <span
+                    class="bg-primary px-2 rounded-lg text-white text-sm"
+                    id="countSeat"
+                    >0</span
+                  >
                 </p>
                 <p class="text-left">Class</p>
                 <p class="text-right col-span-2">Price</p>
@@ -823,13 +827,18 @@
                     class="input input-bordered w-full"
                   />
                 </div>
-                <input
-                  type="button"
-                  value="Next"
-                  id="btnNext"
-                  class="bg-[#686868] text-[#c4c3c3] border-2 border-solid border-[#fff0] py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold"
-                />
-                <!-- class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold" -->
+                <div id="btnNext">
+                  <input
+                    type="button"
+                    value="Next"
+                    class="bg-[#686868] text-[#c4c3c3] border-2 border-solid border-[#fff0] py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold"
+                  />
+                  <!-- <input
+                    type="button"
+                    value="Next"
+                    class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold cursor-pointer"
+                  /> -->
+                </div>
                 <div
                   class="flex justify-around text-base text-[#03071299] font-normal underline"
                 >
