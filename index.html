@@ -734,6 +734,79 @@
                 <p>Total Price</p>
                 <p>BDT <span id="totalPrice">1100</span></p>
               </div>
+
+              <!-- Coupon part  -->
+              <div class="bg-white p-2 rounded-xl flex flex-row h-14">
+                <input
+                  id="couponInp"
+                  class="w-full h-full pl-6 text-sm font-normal outline-none"
+                  type="text"
+                  placeholder="Have any copupon?"
+                />
+                <button
+                  id="btnCoupon"
+                  class="bg-primary text-white h-full px-4 rounded-lg text-base font-semibold border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary"
+                >
+                  Apply
+                </button>
+              </div>
+
+              <!-- Grand Total prices -->
+              <div
+                class="py-4 text-base font-medium inter flex justify-between mt-2"
+              >
+                <p>Grand Total</p>
+                <p>BDT <span id="grandTotalPrice">1100</span></p>
+              </div>
+            </div>
+
+            <!-- Form part -->
+            <div>
+              <form class="inter space-y-6">
+                <div class="flex flex-col gap-4">
+                  <label class="text-base font-semibold text-black"
+                    >Passenger Name*</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    class="input input-bordered w-full"
+                  />
+                </div>
+                <div class="flex flex-col gap-4">
+                  <label class="text-base font-semibold text-black"
+                    >Phone Number*</label
+                  >
+                  <input
+                    id="number"
+                    type="number"
+                    placeholder="Enter your phone number"
+                    class="input input-bordered w-full"
+                  />
+                </div>
+                <div class="flex flex-col gap-4">
+                  <label class="text-base font-semibold text-black"
+                    >Email ID</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="Enter your email id"
+                    class="input input-bordered w-full"
+                  />
+                </div>
+                <button
+                  id="btnNext"
+                  class="bg-primary text-white py-4 w-full rounded-2xl text-xl font-extrabold border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary"
+                >
+                  Next
+                </button>
+                <div
+                  class="flex justify-around text-base text-[#03071299] font-normal underline"
+                >
+                  <p>Terms and Conditions</p>
+                  <p>Cancellation Policy</p>
+                </div>
+              </form>
             </div>
           </div>
         </section>
