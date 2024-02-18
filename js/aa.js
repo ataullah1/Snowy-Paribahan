@@ -1,10 +1,12 @@
 // console.log('Hello World');
-let arr = [];
+let seatArr = [];
+let unicArr = [];
 let count = 0;
 
 const seats = document.getElementsByClassName('seat');
 for (const seat of seats) {
   //   console.log(seat);
+
   seat.addEventListener('click', function (e) {
     // console.log(e.target);
     const seat = e.target.innerText;
@@ -14,6 +16,15 @@ for (const seat of seats) {
     const seatNum = availableSeat.innerText;
     const btnNext = document.getElementById('btnNext');
 
+    seatArr.push(seat);
+    const conditionSeat = seatArr.includes(seat);
+    // console.log(seatArr);
+    if (conditionSeat) {
+      e.target.style.backgroundColor = '#1DD100';
+      e.target.style.color = '#fff';
+    } else {
+      e.target.style.backgroundColor = 'red';
+    }
     const setListCreate = document.createElement('div');
     setListCreate.innerHTML = ` <div
     class="flex justify-between text-base font-normal text-[#03071299]"
@@ -22,36 +33,33 @@ for (const seat of seats) {
     <p>Economoy</p>
     <p>550</p>
   </div>`;
-
-    const arrInc = arr.includes(seat);
-    console.log(arrInc);
-    if (count < 4) {
-      e.target.style.backgroundColor = '#1DD100';
-      e.target.style.color = '#fff';
-      if (arrInc) {
-        console.log('hello');
-      } else {
-        seatLists.appendChild(setListCreate);
-      }
-    } else {
-      removeEventListener(seat);
-    }
+    seatLists.appendChild(setListCreate);
     count = count + 1;
     countSeat.innerText = count;
     const availableS = parseInt(seatNum) - 1;
     availableSeat.innerText = availableS;
-    btnNext.innerHTML = `<input
+    if (count > 0) {
+      btnNext.innerHTML = `<input
     id="btnNextMain"
     type="button"
     value="Next"
     class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold cursor-pointer"
   />`;
-    const seatList = document.getElementsByClassName('seatList');
-    for (const set of seatList) {
-      // console.log(set.innerText);
-      arr.push(set.innerText);
     }
-    // console.log(a[0].length);
-    console.log(arr);
+    // const seatList = document.getElementsByClassName('seatList');
+    // let at = [];
+    // for (const a of seatList) {
+    //   const arr = a.innerText;
+    //   at.push(arr);
+    //   // console.log(arr);
+    // }
+    // console.log(at, seat);
+    // const b = at.includes(seat);
+    // // console.log(b);
+    // if (at.includes(seat) === true) {
+    //   console.log('dubble');
+    // } else {
+    //   console.log('single');
+    // }
   });
 }
