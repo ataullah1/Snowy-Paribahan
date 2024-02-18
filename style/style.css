@@ -28,3 +28,6 @@
 .secTwo {
   background-image: url('../images/section\ one\ 2.svg');
 }
+
+/* class="seat w-[75px] sm:w-[100px] py-2 sm:py-3 bg-[#f7f8f8] rounded-lg sm:rounded-xl cursor-pointer hover:bg-primary hover:text-white */
+/* <div class="flex justify-between gap-3 sm:gap-5 xl:gap-8"> */
