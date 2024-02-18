@@ -4,4 +4,4 @@
 
 ### Developing the Future of Transportation: Where Innovation Meets Mobility
 
-<img src="./screenshortFullPage.jpeg" />
+<img src="./Screenshot_fullSite.jpeg" />
