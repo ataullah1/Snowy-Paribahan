@@ -1,5 +1,6 @@
 // console.log('Hello World');
 let count = 0;
+let totalPrCount = 0;
 
 const seats = document.getElementsByClassName('seat');
 for (const seat of seats) {
@@ -13,7 +14,8 @@ for (const seat of seats) {
     const availableSeat = document.getElementById('seatsNum');
     const seatNum = availableSeat.innerText;
     const btnNext = document.getElementById('btnNext');
-
+    const totalPrice = document.getElementById('totalPrice');
+    const grandTotalPrice = document.getElementById('grandTotalPrice');
     const setListCreate = document.createElement('div');
     setListCreate.innerHTML = ` <div
     class="flex justify-between text-base font-normal text-[#03071299]"
@@ -30,16 +32,22 @@ for (const seat of seats) {
       e.target.style.color = '#fff';
       if (!arrInc) {
         seatLists.appendChild(setListCreate);
-        count = count + 1;
+        totalPrCount += 550;
+        count += 1;
         const availableS = parseInt(seatNum) - 1;
         availableSeat.innerText = availableS;
       } else {
         alert('Sorry, you have already booked this seat.');
       }
     } else {
+      alert(
+        'You cannot select more than four seats at a time. You have already selected four seats.'
+      );
       removeEventListener(seat);
     }
     countSeat.innerText = count;
+    totalPrice.innerText = totalPrCount;
+    grandTotalPrice.innerText = totalPrCount;
     btnNext.innerHTML = `<input
     id="btnNextMain"
     type="button"
@@ -80,12 +88,54 @@ function coupon() {
 
     const btnAct = document.getElementById('btnCouponAct');
     btnAct.addEventListener('click', function () {
-      btnAct.innerText = 'Applied';
-      setTimeout(() => {
-        // const box = document.getElementById('box');
-        btnAct.parentNode.parentNode.classList.add('hidden');
-      }, 500);
-      btnAct.parentNode.parentNode.innerHTML = 'fafdasf';
+      if (typeof discount() === 'number') {
+        btnAct.innerText = 'Applied';
+        () => {
+          btnCouponAc.parentNode.parentNode.classList.add('hidden');
+        };
+
+        btnAct.parentNode.parentNode.removeAttribute('class');
+        btnAct.parentNode.parentNode.innerHTML = `<div
+      class="py-4 text-base font-medium inter flex justify-between mt-2"
+    >
+      <p>Discount</p>
+      <p>BDT <span id="disc">${discount()}</span></p>
+    </div>`;
+        // const disc = document.getElementById('disc');
+        // const dNum = parseFloat(disc);
+        // document.getElementById('grandTotalPrice').innerText =
+        //   totalPrCount - dNum;
+      }
+      // descc();
     });
   }
 }
+
+function discount() {
+  const inpValue = document.getElementById('couponInp').value;
+  if (inpValue === 'NEW15') {
+    const desc15 = (totalPrCount * 15) / 100;
+    return desc15;
+  } else if (inpValue === 'Couple 20') {
+    const desc20 = (totalPrCount * 20) / 100;
+    return desc20;
+  } else if (inpValue === '') {
+    alert('Please Input a coupon code.');
+  } else {
+    alert('Please Input a valid coupon code.');
+  }
+}
+
+// function descc() {
+//   const disc = document.getElementById('disc');
+//   const dNum = parseInt(disc);
+//   const totalPrice = document.getElementById('totalPrice');
+//   const gNum = parseInt(totalPrice);
+//   const des = totalPrCount - dNum;
+//   // console.log(des);
+//   return des;
+// }
+// // console.log(descc());
+// const disc = document.getElementById('disc');
+// const dNum = parseFloat(disc);
+// console.log(dNum);
