@@ -1,9 +1,9 @@
 // console.log('Hello World');
-let arr = [];
 let count = 0;
 
 const seats = document.getElementsByClassName('seat');
 for (const seat of seats) {
+  let arr = [];
   //   console.log(seat);
   seat.addEventListener('click', function (e) {
     // console.log(e.target);
@@ -28,18 +28,18 @@ for (const seat of seats) {
     if (count < 4) {
       e.target.style.backgroundColor = '#1DD100';
       e.target.style.color = '#fff';
-      if (arrInc) {
-        console.log('hello');
-      } else {
+      if (!arrInc) {
         seatLists.appendChild(setListCreate);
+        count = count + 1;
+        const availableS = parseInt(seatNum) - 1;
+        availableSeat.innerText = availableS;
+      } else {
+        console.log('hello');
       }
     } else {
       removeEventListener(seat);
     }
-    count = count + 1;
     countSeat.innerText = count;
-    const availableS = parseInt(seatNum) - 1;
-    availableSeat.innerText = availableS;
     btnNext.innerHTML = `<input
     id="btnNextMain"
     type="button"
@@ -52,6 +52,6 @@ for (const seat of seats) {
       arr.push(set.innerText);
     }
     // console.log(a[0].length);
-    console.log(arr);
+    // console.log(arr);
   });
 }
