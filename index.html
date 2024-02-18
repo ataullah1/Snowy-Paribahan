@@ -342,7 +342,7 @@
                     class="bg-[#1DD10026] flex flex-row gap-1 items-center rounded-xl text-lg text-primary px-4 py-2 font-bold"
                   >
                     <img class="w-7 h7" src="./images/seat.svg" alt="" />
-                    <span id="seats">40</span> Seats left
+                    <span id="seatsNum">40</span> Seats left
                   </button>
                 </div>
               </div>
@@ -402,13 +402,14 @@
         <section
           class="bg-white rounded-3xl p-8 flex flex-col lg:flex-row justify-between gap-2"
         >
-        <!-- Left part  -->
-          <div class="w-3/5">
+          <!-- Left part  -->
+          <div class="w-3/5 pr-8 border-r-2 border-[#0307124D] border-dashed">
             <h2
               class="pb-5 border-b border-dashed border-[#03071233] text-2xl font-semibold to-black"
             >
               Select Your Seat
             </h2>
+            <!-- Available -->
             <div
               class="flex justify-between py-5 border-b border-dashed border-[#03071233]"
             >
@@ -421,15 +422,319 @@
                 Selected
               </p>
             </div>
+            <!-- steering -->
+            <div class="flex items-center justify-end">
+              <div
+                class="bg-[#0307121A] rounded-xl px-8 py-2 my-6 inline-block"
+              >
+                <img class="w-8 h-8" src="./images/steering-wheel.svg" alt="" />
+              </div>
+            </div>
+
+            <!-- seat line  -->
+            <div class="flex gap-6 justify-between">
+              <div class="text-lg font-medium inter text-[#03071280] space-y-6">
+                <p class="py-3">A</p>
+                <p class="py-3">B</p>
+                <p class="py-3">C</p>
+                <p class="py-3">D</p>
+                <p class="py-3">E</p>
+                <p class="py-3">F</p>
+                <p class="py-3">G</p>
+                <p class="py-3">H</p>
+                <p class="py-3">I</p>
+                <p class="py-3">J</p>
+              </div>
+              <div class="flex justify-between gap-16 w-full">
+                <div
+                  class="text-lg inter font-medium text-[#03071280] text-center space-y-6"
+                >
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      A1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      A2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      B1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      B2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      C1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      C2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      D1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      D2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      E1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      E2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      F1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      F2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      G1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      G2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      H1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      H2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      I1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      I2
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      J1
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      J2
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="text-lg inter font-medium text-[#03071280] text-center space-y-6"
+                >
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      A3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      A4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      B3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      B4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      C3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      C4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      D3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      D4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      E3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      E4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      F3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      F4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      G3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      G4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      H3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      H4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      I3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      I4
+                    </p>
+                  </div>
+                  <div class="flex justify-between gap-8">
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      J3
+                    </p>
+                    <p
+                      class="seat w-[100px] py-3 bg-[#f7f8f8] rounded-xl cursor-pointer hover:bg-primary hover:text-white"
+                    >
+                      J4
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Right parts -->
-          <div class="w-2/5">
+          <div class="w-2/5 pl-8">
             <h2
               class="pb-5 border-b border-dashed border-[#03071233] text-2xl font-semibold to-black"
             >
               View your ticket costs
             </h2>
+            <!-- Pricing part  -->
+            <div class="bg-[#F7F8F8] rounded-xl p-8 my-6 inter">
+              <!-- hisaber nam  -->
+              <div
+                class="grid grid-cols-5 text-base font-medium inter to-black pb-4 border-b border-[#03071233] border-dashed"
+              >
+                <p class="text-left col-span-2">
+                  Seat
+                  <span class="bg-primary px-3 rounded-lg text-white">2</span>
+                </p>
+                <p class="text-left">Class</p>
+                <p class="text-right col-span-2">Price</p>
+              </div>
+              <!-- User select seat -->
+              <div
+                class="flex justify-between text-base font-normal text-[#03071299] py-4 border-b border-solid border-[#03071233] inter"
+              >
+                <p>C2</p>
+                <p>Economoy</p>
+                <p>550</p>
+              </div>
+
+              <!-- Total prices -->
+              <div
+                class="py-4 text-base font-medium inter flex justify-between"
+              >
+                <p>Total Price</p>
+                <p>BDT <span id="totalPrice">1100</span></p>
+              </div>
+            </div>
           </div>
         </section>
       </main>
