@@ -61,6 +61,7 @@ for (const seat of seats) {
         const btn = document.getElementById('btnNextMain');
         btn.addEventListener('click', function () {
           const cong = document.getElementById('successMassage');
+          document.getElementById('mainPart').style.cssText = 'opacity: 0.25;';
           cong.classList.remove('hidden');
 
           const btnSec = document.getElementById('btnSuccess');
