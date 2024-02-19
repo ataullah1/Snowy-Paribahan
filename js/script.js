@@ -16,6 +16,7 @@ for (const seat of seats) {
     const btnNext = document.getElementById('btnNext');
     const totalPrice = document.getElementById('totalPrice');
     const grandTotalPrice = document.getElementById('grandTotalPrice');
+    const inpNum = document.getElementById('number');
     const setListCreate = document.createElement('div');
     setListCreate.innerHTML = ` <div
     class="flex justify-between text-base font-normal text-[#03071299]"
@@ -48,12 +49,29 @@ for (const seat of seats) {
     countSeat.innerText = count;
     totalPrice.innerText = totalPrCount;
     grandTotalPrice.innerText = totalPrCount;
-    btnNext.innerHTML = `<input
-    id="btnNextMain"
-    type="button"
-    value="Next"
-    class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold cursor-pointer"
-  />`;
+    inpNum.addEventListener('keyup', function (e) {
+      const numValue = parseInt(e.target.value);
+      if (numValue >= 0) {
+        btnNext.innerHTML = `<input
+        id="btnNextMain"
+        type="button"
+        value="Next"
+        class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold cursor-pointer"
+      />`;
+        const btn = document.getElementById('btnNextMain');
+        btn.addEventListener('click',function(){
+          
+        })
+      } else if (isNaN(numValue)) {
+        btnNext.innerHTML = `<input
+        type="button"
+        value="Next"
+        class="bg-[#686868] text-[#c4c3c3] border-2 border-solid border-[#fff0] py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold"
+      />`;
+      }
+      console.log(numValue);
+    });
+
     const seatList = document.getElementsByClassName('seatList');
     for (const set of seatList) {
       // console.log(set.innerText);
@@ -93,7 +111,7 @@ function coupon() {
         () => {
           btnCouponAc.parentNode.parentNode.classList.add('hidden');
         };
-
+        const disc = discount();
         btnAct.parentNode.parentNode.removeAttribute('class');
         btnAct.parentNode.parentNode.innerHTML = `<div
       class="py-4 text-base font-medium inter flex justify-between mt-2"
@@ -101,12 +119,10 @@ function coupon() {
       <p>Discount</p>
       <p>BDT <span id="disc">${discount()}</span></p>
     </div>`;
-        // const disc = document.getElementById('disc');
-        // const dNum = parseFloat(disc);
-        // document.getElementById('grandTotalPrice').innerText =
-        //   totalPrCount - dNum;
+        document.getElementById('grandTotalPrice').innerText =
+          totalPrCount - disc;
+        console.log(disc);
       }
-      // descc();
     });
   }
 }
@@ -125,17 +141,3 @@ function discount() {
     alert('Please Input a valid coupon code.');
   }
 }
-
-// function descc() {
-//   const disc = document.getElementById('disc');
-//   const dNum = parseInt(disc);
-//   const totalPrice = document.getElementById('totalPrice');
-//   const gNum = parseInt(totalPrice);
-//   const des = totalPrCount - dNum;
-//   // console.log(des);
-//   return des;
-// }
-// // console.log(descc());
-// const disc = document.getElementById('disc');
-// const dNum = parseFloat(disc);
-// console.log(dNum);
