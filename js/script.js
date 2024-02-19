@@ -52,16 +52,23 @@ for (const seat of seats) {
     inpNum.addEventListener('keyup', function (e) {
       const numValue = parseInt(e.target.value);
       if (numValue >= 0) {
-        btnNext.innerHTML = `<input
+        btnNext.innerHTML = `<a href="#successMassage"><input
         id="btnNextMain"
         type="button"
         value="Next"
         class="bg-primary text-white border-2 border-solid border-primary hover:bg-[#fff0] hover:text-primary py-2 sm:py-3 w-full rounded-2xl text-xl font-extrabold cursor-pointer"
-      />`;
+      /></a>`;
         const btn = document.getElementById('btnNextMain');
-        btn.addEventListener('click',function(){
-          
-        })
+        btn.addEventListener('click', function () {
+          const cong = document.getElementById('successMassage');
+          cong.classList.remove('hidden');
+
+          const btnSec = document.getElementById('btnSuccess');
+          btnSec.addEventListener('click', function () {
+            window.location.reload();
+            cong.classList.add('hidden');
+          });
+        });
       } else if (isNaN(numValue)) {
         btnNext.innerHTML = `<input
         type="button"
