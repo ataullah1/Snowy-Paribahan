@@ -28,6 +28,10 @@
 .secTwo {
   background-image: url('../images/section\ one\ 2.svg');
 }
+.seat{
+  user-select: none;
+}
+
 @media (max-width: 640px) {
   .banner div p {
     padding: 10px 0 10px;
