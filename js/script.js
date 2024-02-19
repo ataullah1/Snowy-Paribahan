@@ -17,6 +17,8 @@ for (const seat of seats) {
     const totalPrice = document.getElementById('totalPrice');
     const grandTotalPrice = document.getElementById('grandTotalPrice');
     const inpNum = document.getElementById('number');
+    const inpEmail = document.getElementById('inpEmail');
+    const inpName = document.getElementById('inpName');
     const setListCreate = document.createElement('div');
     setListCreate.innerHTML = ` <div
     class="flex justify-between text-base font-normal text-[#03071299]"
@@ -37,6 +39,9 @@ for (const seat of seats) {
         count += 1;
         const availableS = parseInt(seatNum) - 1;
         availableSeat.innerText = availableS;
+        inpName.disabled = false;
+        inpEmail.disabled = false;
+        inpNum.disabled = false;
       } else {
         alert('Sorry, you have already booked this seat.');
       }
